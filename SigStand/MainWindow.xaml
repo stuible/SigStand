@@ -1,0 +1,43 @@
+﻿<Window x:Class="SigStand.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:SigStand" 
+        mc:Ignorable="d"
+        Title="Fraser Health Signature Creator" Height="619.86" Width="582" ResizeMode="NoResize" Icon="Images/fhicon.png" Topmost="True" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen" Background="#FFF7F7F7">
+    <Window.Resources>
+    </Window.Resources>
+
+
+    <Grid Margin="49,0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="399*"/>
+            <RowDefinition Height="200*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle x:Name="DeptRect" Grid.ColumnSpan="3" Fill="#FFDEDEDE" HorizontalAlignment="Left" Height="45" Margin="31,14,0,0" Stroke="#FFC13131" VerticalAlignment="Top" Width="411" RadiusX="10" RadiusY="10" StrokeThickness="0" Grid.Row="1"/>
+
+        <Rectangle x:Name="NameRect" Grid.ColumnSpan="3" Fill="#FFDEDEDE" HorizontalAlignment="Left" Height="45" Margin="31,213,0,0" Stroke="#FFC13131" VerticalAlignment="Top" Width="411" RadiusX="10" RadiusY="10" StrokeThickness="0"/>
+        <Rectangle x:Name="TitleRect" Grid.ColumnSpan="3" Fill="#FFDEDEDE" HorizontalAlignment="Left" Height="45" Margin="31,312,0,0" Stroke="#FFC13131" VerticalAlignment="Top" Width="411" RadiusX="10" RadiusY="10" StrokeThickness="0"/>
+
+        <TextBox x:Name="NameTextbox" HorizontalAlignment="Left" Height="36" Margin="41,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" TextChanged="TextBox_TextChanged" Grid.Column="2" FontSize="20" Background="#00000000" BorderBrush="#00000000" SelectionBrush="#FFFF5900" FontFamily="Segoe UI Light" CaretBrush="Black" />
+        <TextBox x:Name="TitleTextbox" HorizontalAlignment="Left" Height="36" Margin="41,318,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" TextChanged="TextBox_TextChanged" Grid.Column="2" FontSize="20" Background="#00000000" BorderBrush="#00000000" SelectionBrush="#FFFF5900" FontFamily="Segoe UI Light" CaretBrush="Black" />
+        <Label Content="SET YOUR STANDARDIZED SIGNATURE&#xA;" HorizontalAlignment="Left" Margin="31,116,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Light" FontSize="24" Grid.Column="2" Height="39" Width="411"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="31,180,0,0" VerticalAlignment="Top" Grid.Column="2" Height="32" Width="114" FontFamily="Segoe UI Light" FontSize="17" Foreground="#FF535353"/>
+        <Label Content="Job Title" HorizontalAlignment="Left" Margin="31,279,0,0" VerticalAlignment="Top" Grid.Column="2" Height="32" Width="114" FontFamily="Segoe UI Light" FontSize="17" Foreground="#FF535353"/>
+
+        <Image HorizontalAlignment="Left" Height="77" Margin="105,32,0,0" VerticalAlignment="Top" Width="266" Source="Images/FHSig-slog-hor-A-RGB.gif" Grid.Column="2"/>
+        <TextBox x:Name="DeptTextbox" HorizontalAlignment="Left" Height="36" Margin="41,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" TextChanged="TextBox_TextChanged" Grid.Column="2" FontSize="20" Background="#00000000" BorderBrush="#00000000" SelectionBrush="#FFFF5900" FontFamily="Segoe UI Light" Grid.Row="1" CaretBrush="Black"/>
+        <Label Content="Department" HorizontalAlignment="Left" Margin="31,379,0,0" VerticalAlignment="Top" Grid.Column="2" Height="32" Width="114" FontFamily="Segoe UI Light" FontSize="17" Foreground="#FF535353" Grid.RowSpan="2"/>
+        <Button Content="CREATE SIGNATURE" HorizontalAlignment="Left" Margin="131,101,0,0" VerticalAlignment="Top" Width="211" Height="62" Click="Button_Click" Grid.Column="2" FontSize="16" FontFamily="Segoe UI Light" Background="#FFDEDEDE" Grid.Row="1"/>
+        <Label x:Name="ValidationMessage" Grid.ColumnSpan="3" Content="" HorizontalAlignment="Left" Margin="31,155,0,0" VerticalAlignment="Top" Width="215"/>
+    </Grid>
+</Window>
